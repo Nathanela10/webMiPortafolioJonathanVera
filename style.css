@@ -22,7 +22,7 @@ body {
 .bubbles {
     position: relative;
     display: flex;
-    z-index: 3;
+    z-index: 50;
 }
 
 .bubbles span {
@@ -60,4 +60,68 @@ body {
     color: white;
     font-size: 50px;
     z-index: 0;
+}
+
+.banner {
+    position: absolute;
+    z-index: 100;
+    color: aliceblue;
+}
+
+.home {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 400px 500px;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card:hover {
+    transform: scale(1.2);
+}
+
+.card .content {
+    position: relative;
+    display: flex;
+    margin-top: -80px;
+    gap: 20px;
+}
+
+.card .content .imgBx {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.card .content .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .content .details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: aliceblue;
 }
